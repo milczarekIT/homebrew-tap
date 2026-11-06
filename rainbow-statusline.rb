@@ -5,20 +5,20 @@
 class RainbowStatusline < Formula
   desc "Unified status line for AI coding assistants"
   homepage "https://github.com/milczarekIT/rainbow-statusline"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/milczarekIT/rainbow-statusline/releases/download/v0.1.1/rainbow-statusline_darwin_amd64.tar.gz"
-      sha256 "b96c8a6b6252922aafbe9fdfa52a9c7d3d11555d71ed190c3db4606446f2acbd"
+      url "https://github.com/milczarekIT/rainbow-statusline/releases/download/v0.2.0/rainbow-statusline_darwin_amd64.tar.gz"
+      sha256 "42dcc5db44af26a90692543826859ab64c7b5448bd7731cdca71c979add69e0a"
 
       define_method(:install) do
         bin.install "rainbow-statusline"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/milczarekIT/rainbow-statusline/releases/download/v0.1.1/rainbow-statusline_darwin_arm64.tar.gz"
-      sha256 "ba2f035b50820da73d56e36536f1758bd0f866e2f5572c1771da68c94f465252"
+      url "https://github.com/milczarekIT/rainbow-statusline/releases/download/v0.2.0/rainbow-statusline_darwin_arm64.tar.gz"
+      sha256 "2f92ced010797abfc672a2efe00b57a39a2e1cf0cb42bec8b6db55f80ca1c67b"
 
       define_method(:install) do
         bin.install "rainbow-statusline"
@@ -28,15 +28,15 @@ class RainbowStatusline < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/milczarekIT/rainbow-statusline/releases/download/v0.1.1/rainbow-statusline_linux_amd64.tar.gz"
-      sha256 "d3633c571239b7114e77bf9b9d5c289fc3d6fb2d773096aedf68d6336d69845c"
+      url "https://github.com/milczarekIT/rainbow-statusline/releases/download/v0.2.0/rainbow-statusline_linux_amd64.tar.gz"
+      sha256 "9ead0ed8b469a187f7b29955f8ca376958c3114dbdf57a4d197c83677b00515d"
       define_method(:install) do
         bin.install "rainbow-statusline"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/milczarekIT/rainbow-statusline/releases/download/v0.1.1/rainbow-statusline_linux_arm64.tar.gz"
-      sha256 "d8febebc7519b1f032f9154b50450fa454e77c3be84a1d9ab309cef6915f0d50"
+      url "https://github.com/milczarekIT/rainbow-statusline/releases/download/v0.2.0/rainbow-statusline_linux_arm64.tar.gz"
+      sha256 "07b67f7767506257ffc953e732dccd2ffad355498ce87a61462333600f114563"
       define_method(:install) do
         bin.install "rainbow-statusline"
       end
